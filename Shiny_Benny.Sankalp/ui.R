@@ -35,7 +35,7 @@ shinyUI(fluidPage( #create the overall page
                      "panicle.number.per.plant",
                      "seed.length",
                      "brown.rice.volume",
-                     "panicle length" )),
+                     "panicle.length" )),
       radioButtons("trait.2", #the input variable that the value will go into
                    "Choose a trait to display:",
                    c("protein.content",
@@ -47,7 +47,7 @@ shinyUI(fluidPage( #create the overall page
                      "panicle.number.per.plant",
                      "seed.length",
                      "brown.rice.volume",
-                     "panicle length" )),
+                     "panicle.length" )),
       radioButtons("trait.3", #the input variable that the value will go into
                                 "Choose a trait to display:",
                    c("protein.content",
@@ -59,7 +59,7 @@ shinyUI(fluidPage( #create the overall page
                      "panicle.number.per.plant",
                      "seed.length",
                      "brown.rice.volume",
-                     "panicle length" ))
+                     "panicle.length" ))
       ),
       
     # Show a plot of the generated distribution
