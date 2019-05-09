@@ -12,9 +12,8 @@ library(shiny)
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
-  data.pheno <- read_csv("/home/ubuntu/Assignments/Shiny_Benny.Sankalp/Shiny_Benny.Sankalp/RiceDiversity.44K.MSU6.Phenotypes.csv", na=c("NA", "00")) 
-  #head(data.pheno)
-  
+  data.pheno <- read_csv("RiceDiversity.44K.MSU6.Phenotypes.csv", na=c("NA", "00")) 
+ 
   #changing the column names to pull information for graphing
   colnames(data.pheno)[colnames(data.pheno)=="Protein content"] <- "protein.content"
   colnames(data.pheno)[colnames(data.pheno)=="Amylose content"] <- "amylose.content"
