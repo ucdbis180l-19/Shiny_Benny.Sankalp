@@ -26,26 +26,42 @@ shinyUI(fluidPage( #create the overall page
     sidebarPanel(
       radioButtons("trait.1", #the input variable that the value will go into
                    "Choose a trait to display:",
-                   c("Leaf.pubescence",
-                     "Alu.Tol",
-                     "Plant.Height",
-                     "Seed.surface.area", 
-                     "Brown.rice.seed.length")),
+                   c("protein.content",
+                     "amylose.content",
+                     "alu.tol",
+                     "plant.height",
+                     "seed.surface.area",
+                     "seed.volume", 
+                     "panicle.number.per.plant",
+                     "seed.length",
+                     "brown.rice.volume",
+                     "panicle length" )),
       radioButtons("trait.2", #the input variable that the value will go into
                    "Choose a trait to display:",
-                   c("Leaf.pubescence",
-                     "Alu.Tol",
-                     "Plant.Height",
-                     "Seed.surface.area", 
-                     "Brown.rice.seed.length")),
+                   c("protein.content",
+                     "amylose.content",
+                     "alu.tol",
+                     "plant.height",
+                     "seed.surface.area",
+                     "seed.volume", 
+                     "panicle.number.per.plant",
+                     "seed.length",
+                     "brown.rice.volume",
+                     "panicle length" )),
       radioButtons("trait.3", #the input variable that the value will go into
                                 "Choose a trait to display:",
-                                c("Leaf.pubescence",
-                                  "Alu.Tol",
-                                  "Plant.Height",
-                                  "Seed.surface.area", 
-                                  "Brown.rice.seed.length"))
-    ),
+                   c("protein.content",
+                     "amylose.content",
+                     "alu.tol",
+                     "plant.height",
+                     "seed.surface.area",
+                     "seed.volume", 
+                     "panicle.number.per.plant",
+                     "seed.length",
+                     "brown.rice.volume",
+                     "panicle length" ))
+      ),
+      
     # Show a plot of the generated distribution
     mainPanel(plotOutput("scatterplot")
     )
