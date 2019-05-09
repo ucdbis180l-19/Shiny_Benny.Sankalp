@@ -9,7 +9,8 @@
 
 library(shiny)
 
-# Define UI for application that draws a histogram
+# Define UI for application that draws a scatterplot
+
 shinyUI(fluidPage( #create the overall page
   
   # Application title
@@ -17,7 +18,7 @@ shinyUI(fluidPage( #create the overall page
   
   # Some helpful information
   helpText("This application creates a Scatter plot of any two traits (user chosen), 
-           colored by the values of a third RICE_44k genotypes traits by population. 
+           colored by the values of a file RICE_44k genotypes, traits by population. 
            Please use the radio box below to choose a trait"),
   
   # Sidebar with a radio box to input which trait will be plotted
@@ -43,9 +44,8 @@ shinyUI(fluidPage( #create the overall page
                                   "Alu.Tol",
                                   "Plant.Height",
                                   "Seed.surface.area", 
-                                  "Brown.rice.seed.length")),
-    
-    
+                                  "Brown.rice.seed.length"))
+    ),
     # Show a plot of the generated distribution
     mainPanel(plotOutput("scatterplot")
     )
