@@ -29,14 +29,6 @@ shinyServer(function(input, output) {
   
   
   output$scatterplot <- renderPlot({
-    
-    # generate bins based on input$bins from ui.R
-    #x    <- faithful[, 2] 
-    #bins <- seq(min(x), max(x), length.out = input$bins + 1)
-    
-    # draw the histogram with the specified number of bins
-    #hist(x, breaks = bins, col = 'blue', border = 'black')
-    
     #set up the scatter plot
     plot <- ggplot(data = data.pheno, aes_string(x=input$trait.1, y=input$trait.2, color=input$trait.3))
     plot + geom_point()
