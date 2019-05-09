@@ -11,15 +11,17 @@ library(shiny)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-   
-  output$distPlot <- renderPlot({
+  data.pheno <- read_csv("/home/ubuntu/RiceSNPData/RiceDiversity.44K.MSU6.Phenotypes.csv", na=c("NA", "00")) 
+  #head(data.pheno)
+  
+  output$scatterplot <- renderPlot({
     
     # generate bins based on input$bins from ui.R
     x    <- faithful[, 2] 
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
     
     # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+    hist(x, breaks = bins, col = 'blue', border = 'black')
     
   })
   
