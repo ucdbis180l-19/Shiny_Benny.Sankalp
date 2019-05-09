@@ -14,7 +14,7 @@ library(shiny)
 shinyUI(fluidPage( #create the overall page
   
   # Application title
-  titlePanel("Traits by Population "),
+  titlePanel("Traits by Population"),
   
   # Some helpful information
   helpText("This application creates a Scatter plot of any two traits (user chosen), 
