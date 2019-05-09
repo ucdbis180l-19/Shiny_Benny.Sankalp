@@ -45,6 +45,7 @@ shinyUI(fluidPage( #create the overall page
                                   "Seed.surface.area", 
                                   "Brown.rice.seed.length")),
     
+    
     # Show a plot of the generated distribution
     mainPanel(plotOutput("scatterplot")
     )
