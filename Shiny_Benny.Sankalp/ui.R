@@ -29,16 +29,14 @@ shinyUI(fluidPage( #create the overall page
                      "Alu.Tol",
                      "Plant.Height",
                      "Seed.surface.area", 
-                     "Brown.rice.seed.length"),
-                   
+                     "Brown.rice.seed.length")),
       radioButtons("trait.2", #the input variable that the value will go into
                    "Choose a trait to display:",
                    c("Leaf.pubescence",
                      "Alu.Tol",
                      "Plant.Height",
                      "Seed.surface.area", 
-                     "Brown.rice.seed.length"),
-                   
+                     "Brown.rice.seed.length")),
       radioButtons("trait.3", #the input variable that the value will go into
                                 "Choose a trait to display:",
                                 c("Leaf.pubescence",
