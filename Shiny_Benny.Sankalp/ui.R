@@ -10,24 +10,45 @@
 library(shiny)
 
 # Define UI for application that draws a histogram
-shinyUI(fluidPage(
+shinyUI(fluidPage( #create the overall page
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Traits by Population "),
   
-  # Sidebar with a slider input for number of bins 
+  # Some helpful information
+  helpText("This application creates a Scatter plot of any two traits (user chosen), 
+           colored by the values of a third RICE_44k genotypes traits by population. 
+           Please use the radio box below to choose a trait"),
+  
+  # Sidebar with a radio box to input which trait will be plotted
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
-    ),
+      radioButtons("trait.1", #the input variable that the value will go into
+                   "Choose a trait to display:",
+                   c("Leaf.pubescence",
+                     "Alu.Tol",
+                     "Plant.Height",
+                     "Seed.surface.area", 
+                     "Brown.rice.seed.length"),
+                   
+      radioButtons("trait.2", #the input variable that the value will go into
+                   "Choose a trait to display:",
+                   c("Leaf.pubescence",
+                     "Alu.Tol",
+                     "Plant.Height",
+                     "Seed.surface.area", 
+                     "Brown.rice.seed.length"),
+                   
+      radioButtons("trait.3", #the input variable that the value will go into
+                                "Choose a trait to display:",
+                                c("Leaf.pubescence",
+                                  "Alu.Tol",
+                                  "Plant.Height",
+                                  "Seed.surface.area", 
+                                  "Brown.rice.seed.length")),
     
     # Show a plot of the generated distribution
-    mainPanel(
-       plotOutput("distPlot")
+    mainPanel(plotOutput("scatterplot")
     )
   )
 ))
