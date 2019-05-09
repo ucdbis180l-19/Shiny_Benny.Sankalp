@@ -8,13 +8,12 @@
 #
 
 library(shiny)
-library(tidyverse)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-  data.pheno <- read_csv("/home/ubuntu/Assignments/Shiny_Benny.Sankalp/Shiny_Benny.Sankalp/RiceDiversity.44K.MSU6.Phenotypes.csv", na=c("NA", "00")) 
-  #head(data.pheno)
-  
+
+  data.pheno <- read_csv("RiceDiversity.44K.MSU6.Phenotypes.csv", na=c("NA", "00")) 
+ 
   #changing the column names to pull information for graphing
   colnames(data.pheno)[colnames(data.pheno)=="Protein content"] <- "protein.content"
   colnames(data.pheno)[colnames(data.pheno)=="Amylose content"] <- "amylose.content"
@@ -29,9 +28,11 @@ shinyServer(function(input, output) {
   
   
   output$scatterplot <- renderPlot({
+
     #set up the scatter plot
     plot <- ggplot(data = data.pheno, aes_string(x=input$trait.1, y=input$trait.2, color=input$trait.3))
     plot + geom_point()
+
     
   })
   
