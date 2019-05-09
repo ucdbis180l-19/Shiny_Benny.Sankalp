@@ -33,7 +33,7 @@ shinyUI(fluidPage( #create the overall page
                      "seed.volume",
                      "panicle.number.per.plant",
                      "seed.length",
-                     "Brown.rice.seed.length",
+                     "brown.rice.seed.length",
                      "panicle.length")),
       radioButtons("trait.2", #the input variable that the value will go into
                    "Choose a trait to display:",
@@ -45,7 +45,7 @@ shinyUI(fluidPage( #create the overall page
                      "seed.volume",
                      "panicle.number.per.plant",
                      "seed.length",
-                     "Brown.rice.seed.length",
+                     "brown.rice.seed.length",
                      "panicle.length")),
       radioButtons("trait.3", #the input variable that the value will go into
                                 "Choose a trait to display with different colors:",
@@ -57,7 +57,7 @@ shinyUI(fluidPage( #create the overall page
                                   "seed.volume",
                                   "panicle.number.per.plant",
                                   "seed.length",
-                                  "Brown.rice.seed.length",
+                                  "brown.rice.seed.length",
                                   "panicle.length"))
     ),
     # Show a plot of the generated distribution
