@@ -16,9 +16,9 @@ shinyUI(fluidPage( #create the overall page
   titlePanel("Traits by Population"),
   
   # Some helpful information
-  helpText("This application creates a Scatter plot of any two traits (user chosen), 
-           colored by the values of a third RICE_44k genotypes traits by population. 
-           Please use the radio box below to choose a trait"),
+  helpText("This application creates a Scatter plot of any two traits (user-chosen), 
+           colored by the values of a RICE_44k phenotypes traits by population. 
+           Please use the radio box below to choose your traits. Note: Use different traits under each selection to understand multivariable relationships."),
   
   # Sidebar with a radio box to input which trait will be plotted
   sidebarLayout(
