@@ -48,7 +48,7 @@ shinyUI(fluidPage( #create the overall page
                      "Brown.rice.seed.length",
                      "panicle.length")),
       radioButtons("trait.3", #the input variable that the value will go into
-                                "Choose a trait to display:",
+                                "Choose a trait to display with different colors:",
                                 c("protein.content",
                                   "amylose.content",
                                   "alu.tol",
